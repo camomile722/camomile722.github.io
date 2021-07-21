@@ -18,7 +18,9 @@ function showModal(index) {
 
   var caption = allThumbImages[index].getAttribute('data-caption');
   slideCaption.innerHTML = caption;
-  slideNumber.innerHTML = (activeImage + 1) + ' / ' + allThumbImages.length
+  // slideNumber.innerHTML = (activeImage + 1) + ' / ' + allThumbImages.length
+  slideNumber.innerHTML = (index + 1) + ' / ' + allThumbImages.length
+  allThumbImages[index].classList.add('active');
 
   modalWindow.classList.add('active');
 
