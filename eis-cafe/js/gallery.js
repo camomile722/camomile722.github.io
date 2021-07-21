@@ -13,6 +13,7 @@ var activeImage = 0;
 function showModal(index) {
 
   var filename = allThumbImages[index].src.replace('_thumb', '');
+
   modalImage.src = filename;
 
   var caption = allThumbImages[index].getAttribute('data-caption');
@@ -29,9 +30,10 @@ function showModal(index) {
 for (var i = 0; i < allThumbImages.length; i++) {
   allThumbImages[i].addEventListener('click', function(evt) {
     var imageIndex = parseInt(evt.target.getAttribute('data-index'));
-    activeImage = imageIndex;
+    
 
     showModal(imageIndex);
+    activeImage = imageIndex;
 
   });
 }
@@ -48,16 +50,20 @@ modalWindow.addEventListener('click', function(evt) {
     modalWindow.classList.remove('active');
 });
 
+
+
 //--------Next button------
 nextButton.addEventListener('click', function() {
-  activeImage++;
+  activeImage = activeImage + 1;
   if (activeImage >= allThumbImages.length) activeImage = 0;
   showModal(activeImage);
 });
 
 //--------Prev button------
 prevButton.addEventListener('click', function() {
-  activeImage--;
+  //activeImage--;
+  activeImage = activeImage - 1;
   if (activeImage < 0) activeImage = allThumbImages.length - 1;
   showModal(activeImage);
 });
+
