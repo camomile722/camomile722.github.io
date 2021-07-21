@@ -13,17 +13,13 @@ var activeImage = 0;
 function showModal(index) {
 
   var filename = allThumbImages[index].src.replace('_thumb', '');
-
   modalImage.src = filename;
 
   var caption = allThumbImages[index].getAttribute('data-caption');
   slideCaption.innerHTML = caption;
-  // slideNumber.innerHTML = (activeImage + 1) + ' / ' + allThumbImages.length
-  slideNumber.innerHTML = (index + 1) + ' / ' + allThumbImages.length
-  allThumbImages[index].classList.add('active');
+  slideNumber.innerHTML = (activeImage + 1) + ' / ' + allThumbImages.length
 
   modalWindow.classList.add('active');
-
 }
 
 //----------Open image that you click-----------------
@@ -32,10 +28,9 @@ function showModal(index) {
 for (var i = 0; i < allThumbImages.length; i++) {
   allThumbImages[i].addEventListener('click', function(evt) {
     var imageIndex = parseInt(evt.target.getAttribute('data-index'));
-    
+    activeImage = imageIndex;
 
     showModal(imageIndex);
-    activeImage = imageIndex;
 
   });
 }
@@ -52,20 +47,16 @@ modalWindow.addEventListener('click', function(evt) {
     modalWindow.classList.remove('active');
 });
 
-
-
 //--------Next button------
 nextButton.addEventListener('click', function() {
-  activeImage = activeImage + 1;
+  activeImage++;
   if (activeImage >= allThumbImages.length) activeImage = 0;
   showModal(activeImage);
 });
 
 //--------Prev button------
 prevButton.addEventListener('click', function() {
-  //activeImage--;
-  activeImage = activeImage - 1;
+  activeImage--;
   if (activeImage < 0) activeImage = allThumbImages.length - 1;
   showModal(activeImage);
 });
-
