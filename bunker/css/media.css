@@ -142,8 +142,46 @@
 
 
 /*---------HOVER NONE END----------*/
+.section_1 h1{
+  padding:30px 0px 0px 0px;
+  font-size: 14pt;
+}
+.img-services{
+  margin: 0px; 
+}
+.img-services img{
+  margin: 0px;
+}
+.img-services a{
+  font-size:20px;
+}
+.services{
+  padding-bottom:0px;
+  padding:0px;
+}
+.flex-box, .nav{
+  margin-bottom: 0px;
+}
+body, .text-links{
+  font-size:20px;
+}
 
-
+.button a {
+  padding: 20px 50px;
+  font-size:20px;
+}
+.item {
+  margin: 0px 0 30px 0;
+}
+.section_2 {
+  padding: 30px 0 30px 0;
+}
+.contacts{
+  margin-bottom: 0px;
+}
+.contacts a, .contacts p{
+  font-size: 18px;
+}
 
 }
 
