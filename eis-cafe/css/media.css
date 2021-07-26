@@ -180,9 +180,8 @@
   }
 
   /*------SECTION2------------*/
-  .workshop-section2 {
+  .workshop-section2-text {
     width: 90%;
-    margin: 80px auto;
   }
 
  .workshop-box{
@@ -455,10 +454,11 @@
   }
 
   /*------SECTION2------------*/
-  .workshop-section2 {
+
+  .workshop-section2-text {
     width: 90%;
-    margin: 80px auto;
   }
+
 
  .workshop-box{
    flex-direction: column;
