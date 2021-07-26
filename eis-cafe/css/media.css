@@ -248,6 +248,7 @@
   }
   .form-box{
     height: 1400px;
+    background-attachment: initial;
   }
  }
 
@@ -527,6 +528,7 @@
   }
   .form-box{
     height: 1400px;
+    background-attachment: initial;
   }
  }
 /* TABLETS */
