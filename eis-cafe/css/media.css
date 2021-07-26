@@ -79,6 +79,7 @@
   /*------------------------Seite 1--------------------------*/
   .section1-bg{
     background-position: center;
+    background-attachment: initial;
   }
   .section1-box{
     flex-direction:column;
@@ -352,6 +353,7 @@
   /*------------------------Seite 1--------------------------*/
   .section1-bg{
     background-position: center;
+    background-attachment: initial;
   }
   .section1-box{
     flex-direction:column;
